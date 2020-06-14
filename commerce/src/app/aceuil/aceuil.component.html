@@ -1,0 +1,14 @@
+<div class="row card-deck mt-2">
+  <ng-container *ngFor="let produit of produits">
+    <div class="col-lg-3 mb-3">
+      <div class="card border-warning shadow-lg">
+        <img class="card-img-top" src="data:image/jpeg;base64,{{produit.picbyte}}" alt="" width="150" height="150" />
+        <div class="card-body" >
+          <p class="card-text" >{{produit.nom}}</p>
+          <p class="card-text">quantité:{{produit.quantite}}       prix: ${{produit.prix}}</p>
+          <button class="btn btn-primary">add to carte</button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

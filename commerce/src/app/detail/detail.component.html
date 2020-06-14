@@ -1,0 +1,27 @@
+<div class="row mt-3">
+
+  <div class="col-lg-6 offset-lg-3">
+    <button type="button" class="btn btn-danger"><a class="navbar-brand" routerLink="/add-produit">back</a></button>
+
+    <form>
+      <label for="name" >Nom</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="nom du produit" [ngModel]="produit.nom" >
+
+      <label for="ref" >reference</label>
+      <input type="text" class="form-control" id="ref" placeholder="reference du produit" name="ref" [ngModel]="produit.ref">
+
+      <label for="quantite" >quantite</label>
+      <input type="text" class="form-control" id="quantite" placeholder="quantité" name="quantite" [ngModel]="produit.quantite">
+      <label for="prix" >Price</label>
+      <input type="text" class="form-control" id="prix" placeholder="prix" name="prix" [ngModel]="produit.prix">
+
+      <div class="form-group">
+        <br>
+
+        <img src="data:image/jpeg;base64,{{produit.picbyte}}" >
+      </div>
+      <br>
+    </form>
+
+  </div>
+</div>

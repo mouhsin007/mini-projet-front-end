@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+
+  <th>reference</th>
+  <th>nom produit</th>
+  <th>quantite</th>
+  <th>prix</th>
+  <th>action</th>
+
+  </thead>
+  <tbody>
+  <tr *ngFor="let produit of produits">
+    <td>{{produit.ref}}</td>
+    <td>{{produit.nom}}</td>
+    <td>{{produit.quantite}}</td>
+    <td>{{produit.prix}}</td>
+    <td>
+      <button type="button" class="btn btn-primary" (click)="setProduit(produit)">Show Details</button>
+      <button type="button" class="btn btn-danger" (click)="deleteProduit(produit.id)">delete product</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
